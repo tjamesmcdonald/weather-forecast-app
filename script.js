@@ -10,7 +10,7 @@ let cities = []
 // FUNCTIONS
 function searchCity(event) {
     event.preventDefault();
-    const requestUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${formData.value}&limit=1&appid=e8a2ccd88f0098a03af0cb2cd2922118`
+    const requestUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${formData.value}&limit=1&appid=e8a2ccd88f0098a03af0cb2cd2922118`
     const newCity = formData.value.trim()
     cities.push(newCity)
     localStorage.setItem('cities', JSON.stringify(cities))
@@ -154,7 +154,7 @@ previousCitiesEl.addEventListener("click", function(event) {
     if (element.matches("button") === true) {
       // Get its data-index value and remove the todo element from the list
       const city = element.textContent
-      const requestUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=e8a2ccd88f0098a03af0cb2cd2922118`
+      const requestUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=e8a2ccd88f0098a03af0cb2cd2922118`
       fetch(requestUrl)
         .then(function (response) {
             return response.json();
