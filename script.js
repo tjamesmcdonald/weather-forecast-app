@@ -35,6 +35,10 @@ function renderPreviousCities() {
     for (var i = 0; i < cities.length; i++) {
         var city = cities[i];
         var button = document.createElement("button");
+        button.classList.add('btn')
+        button.classList.add('btn-primary')
+        button.classList.add('col-12')
+        button.classList.add('my-2')
         button.textContent = city;
         previousCitiesEl.appendChild(button)
     }
@@ -123,6 +127,7 @@ function renderSearchResults(data) {
   `;
 
   var searchResults = document.createElement("div");
+  searchResultsEl.innerHTML = '';
   searchResults.innerHTML = html;
   searchResultsEl.appendChild(searchResults);
 
